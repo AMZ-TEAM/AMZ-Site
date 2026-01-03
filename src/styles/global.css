@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  /* Definindo as cores da AMZ no novo padrão v4 */
+  --color-amz-dark: #1A2238;  /* Azul Marinho Profundo */
+  --color-amz-brand: #00D1FF; /* Ciano Elétrico */
+  --color-amz-light: #F8F9FA; /* Off-White */
+}

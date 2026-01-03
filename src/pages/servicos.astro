@@ -1,0 +1,125 @@
+---
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+
+const title = "Serviços | AMZ Digital Agency";
+
+// Mesma lógica de briefing da Home
+const mensagemWhatsApp = `Olá, estava vendo a página de serviços e gostaria de um orçamento.
+
+Aqui estão os detalhes:
+- Nome ou Empresa: 
+- Serviço de interesse: 
+- Objetivo principal: 
+- Estilo (Elegante ou Moderno): 
+- Qual seu orçamento disponível?:`;
+
+const seuNumero = "5531995081457"; 
+const whatsappLink = `https://wa.me/${seuNumero}?text=${encodeURIComponent(mensagemWhatsApp)}`;
+---
+
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title}</title>
+	</head>
+	<body class="bg-amz-dark text-amz-light font-sans antialiased overflow-x-hidden">
+		
+		<nav class="sticky top-0 z-50 bg-amz-dark/90 backdrop-blur-md border-b border-white/5">
+			<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+				<a href="/" class="hover:opacity-80 transition block">
+					<Logo />
+				</a>
+				<a href="/" class="text-xs font-bold text-gray-400 hover:text-amz-brand transition uppercase tracking-[0.2em]">
+					← Voltar
+				</a>
+			</div>
+		</nav>
+
+		<header class="max-w-6xl mx-auto px-6 py-16 md:py-24 text-center">
+			<div class="inline-block px-3 py-1 mb-6 text-[10px] font-bold tracking-[0.3em] uppercase border border-amz-brand/30 text-amz-brand rounded-full">
+				Nossas Especialidades
+			</div>
+			<h1 class="text-4xl md:text-5xl font-bold mb-6 italic">Soluções Digitais <span class="text-amz-brand">A-Z</span></h1>
+			<p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+				Do planejamento visual à hospedagem de alta performance. Entregamos tecnologia que impulsiona faturamento e autoridade.
+			</p>
+		</header>
+
+		<section class="max-w-6xl mx-auto px-6 pb-24">
+			<div class="grid gap-12">
+				
+				<div class="grid md:grid-cols-2 gap-8 items-center p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-amz-brand/20 transition-all">
+					<div>
+						<h2 class="text-2xl font-bold mb-4 text-amz-brand">Landing Pages de Alta Conversão</h2>
+						<p class="text-gray-400 mb-6 leading-relaxed">
+							Desenvolvemos páginas focadas em um único objetivo: transformar visitantes em clientes. Ideal para comerciantes e prestadores de serviços.
+						</p>
+						<ul class="space-y-3 text-sm text-gray-300">
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Copywriting focado em vendas</li>
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Carregamento instantâneo</li>
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Otimização Mobile-First</li>
+						</ul>
+					</div>
+					<div class="bg-amz-brand/5 border border-amz-brand/10 aspect-video rounded-3xl flex items-center justify-center group overflow-hidden">
+						<div class="text-amz-brand font-mono text-xs uppercase tracking-[0.4em] animate-pulse">Performance Mode</div>
+					</div>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-8 items-center p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-amz-brand/20 transition-all">
+					<div class="order-2 md:order-1 bg-white/5 border border-white/10 aspect-video rounded-3xl flex items-center justify-center">
+						<div class="text-white/20 font-mono text-xs uppercase tracking-[0.4em]">Design Premium</div>
+					</div>
+					<div class="order-1 md:order-2">
+						<h2 class="text-2xl font-bold mb-4 text-amz-brand">Sites Institucionais</h2>
+						<p class="text-gray-400 mb-6 leading-relaxed">
+							Para empresas e profissionais que precisam de autoridade. Sites que contam a história da marca e passam confiança imediata ao investidor ou cliente.
+						</p>
+						<ul class="space-y-3 text-sm text-gray-300">
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Layouts 100% autorais</li>
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Arquitetura de informação fluida</li>
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> SEO técnico estruturado</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-8 items-center p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-amz-brand/20 transition-all">
+					<div>
+						<h2 class="text-2xl font-bold mb-4 text-amz-brand">Gestão e Suporte (Z)</h2>
+						<p class="text-gray-400 mb-6 leading-relaxed">
+							A fase final e contínua. Cuidamos da sua infraestrutura para que o seu único trabalho seja atender os novos leads que chegarem.
+						</p>
+						<ul class="space-y-3 text-sm text-gray-300">
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Hospedagem Global Segura</li>
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Certificados SSL e Proteção</li>
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Manutenção preventiva</li>
+						</ul>
+					</div>
+					<div class="bg-amz-brand/5 border border-amz-brand/10 aspect-video rounded-3xl flex items-center justify-center">
+						<div class="text-amz-brand font-mono text-xs uppercase tracking-[0.4em]">Infraestrutura Z</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="max-w-6xl mx-auto px-6 py-20">
+			<div class="bg-gradient-to-br from-amz-brand to-[#0088AA] p-10 md:p-20 rounded-[3.5rem] text-amz-dark text-center relative overflow-hidden group">
+				<div class="relative z-10">
+					<h2 class="text-3xl md:text-5xl font-black mb-8 uppercase tracking-tighter">Pronto para o próximo nível?</h2>
+					<a href={whatsappLink} target="_blank" class="bg-amz-dark text-amz-light px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-all inline-block shadow-2xl">
+						Solicitar Consultoria
+					</a>
+				</div>
+				<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32 transition-all group-hover:bg-white/20"></div>
+			</div>
+		</section>
+
+		<footer class="max-w-6xl mx-auto px-6 py-12 text-center text-gray-500 text-[10px] uppercase tracking-widest border-t border-white/5">
+			AMZ Digital Agency © 2026 • Estratégia de ponta a ponta.
+		</footer>
+
+	</body>
+</html>

@@ -1,0 +1,189 @@
+---
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+
+const title = "AMZ | Consultoria Web de Início ao Fim";
+
+// Configuração Estratégica do WhatsApp
+const mensagemWhatsApp = `Olá, Gostaria de um orçamento.
+
+Aqui estão alguns detalhes para começarmos:
+- Nome ou Empresa: 
+- Qual o objetivo do site? (ex: vender mais, passar autoridade): 
+- Estilo visual preferido? (ex: moderno ou elegante): 
+- Já possui um site ou seria do zero?:
+- Qual seu orçamento disponível?:`;
+
+// Seu número configurado
+const seuNumero = "5531995081457"; 
+const whatsappLink = `https://wa.me/${seuNumero}?text=${encodeURIComponent(mensagemWhatsApp)}`;
+---
+
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title}</title>
+	</head>
+	<body class="bg-amz-dark text-amz-light font-sans antialiased overflow-x-hidden">
+		
+		<nav class="sticky top-0 z-50 bg-amz-dark/90 backdrop-blur-md border-b border-white/5">
+			<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+				<a href="/" class="block">
+					<Logo />
+				</a>
+				<div class="flex items-center gap-6">
+					<a href="/servicos" class="hidden md:block text-xs font-bold uppercase tracking-widest hover:text-amz-brand transition">Serviços</a>
+					<a href={whatsappLink} target="_blank" class="text-xs font-bold bg-amz-brand text-amz-dark px-6 py-2.5 rounded-full hover:scale-105 transition-all uppercase tracking-tighter">
+						Orçamento
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<main class="max-w-6xl mx-auto px-6 py-16 md:py-32 relative">
+			<div class="grid lg:grid-cols-2 gap-16 items-center">
+				<div class="relative z-10">
+					<div class="inline-flex items-center gap-2 px-3 py-1 mb-8 text-xs font-bold tracking-widest uppercase border border-amz-brand/30 text-amz-brand rounded-lg bg-amz-brand/5">
+						<span class="relative flex h-2 w-2">
+							<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amz-brand opacity-75"></span>
+							<span class="relative inline-flex rounded-full h-2 w-2 bg-amz-brand"></span>
+						</span>
+						Disponível para novos projetos
+					</div>
+					
+					<h1 class="text-4xl md:text-6xl font-bold leading-[1.15] mb-8">
+						O <span class="text-amz-brand italic">Início, Meio e Fim</span> do seu próximo site.
+					</h1>
+					
+					<p class="text-lg text-gray-400 leading-relaxed mb-10 max-w-xl">
+						Transformamos desejos em plataformas de alta performance. Estratégia digital completa para negócios locais e marcas de autoridade.
+					</p>
+					
+					<div class="flex flex-wrap gap-4">
+						<a href={whatsappLink} target="_blank" class="bg-amz-brand text-amz-dark px-10 py-4 rounded-2xl font-bold text-lg hover:shadow-[0_0_30px_rgba(0,209,255,0.3)] transition-all">
+							Começar Projeto
+						</a>
+						<a href="/servicos" class="border border-white/10 bg-white/5 hover:bg-white/10 px-10 py-4 rounded-2xl font-bold text-lg transition text-center">
+							Ver Serviços
+						</a>
+					</div>
+				</div>
+
+				<div class="hidden lg:block relative">
+					<div class="relative w-full aspect-square border border-white/10 rounded-[3rem] bg-gradient-to-br from-white/5 to-transparent flex items-center justify-center p-12">
+						<div class="w-full bg-amz-dark border border-amz-brand/40 p-6 rounded-2xl shadow-2xl animate-bounce-slow">
+							<div class="flex justify-between items-center mb-4">
+								<div class="h-2 w-12 bg-amz-brand rounded-full"></div>
+								<div class="h-2 w-4 bg-white/20 rounded-full"></div>
+							</div>
+							<div class="space-y-3">
+								<div class="h-3 w-full bg-white/10 rounded-md"></div>
+								<div class="h-3 w-[80%] bg-white/10 rounded-md"></div>
+								<div class="h-8 w-full border border-amz-brand/20 rounded-lg mt-4 flex items-center px-3">
+									<div class="h-1.5 w-1.5 bg-amz-brand rounded-full mr-2"></div>
+									<span class="text-[10px] text-amz-brand font-bold uppercase tracking-widest">Projeto em Análise</span>
+								</div>
+							</div>
+						</div>
+						<div class="absolute -top-4 -right-4 h-24 w-24 bg-amz-brand/10 blur-3xl rounded-full"></div>
+						<div class="absolute -bottom-8 -left-8 h-32 w-32 bg-amz-brand/5 blur-3xl rounded-full"></div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<section class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="group p-10 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-amz-brand/40 transition-all">
+					<div class="text-5xl font-black text-white/5 group-hover:text-amz-brand transition-colors mb-6">A</div>
+					<h3 class="text-2xl font-bold mb-4 italic">Início</h3>
+					<p class="text-gray-400 leading-relaxed text-sm">Planejamento e estratégia focado no seu público-alvo e nicho de mercado.</p>
+				</div>
+				<div class="group p-10 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-amz-brand/40 transition-all">
+					<div class="text-5xl font-black text-white/5 group-hover:text-amz-brand transition-colors mb-6">M</div>
+					<h3 class="text-2xl font-bold mb-4 italic">Meio</h3>
+					<p class="text-gray-400 leading-relaxed text-sm">Desenvolvimento moderno para velocidade e responsividade.</p>
+				</div>
+				<div class="group p-10 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-amz-brand/40 transition-all">
+					<div class="text-5xl font-black text-white/5 group-hover:text-amz-brand transition-colors mb-6">Z</div>
+					<h3 class="text-2xl font-bold mb-4 italic">Fim</h3>
+					<p class="text-gray-400 leading-relaxed text-sm">Lançamento, suporte dedicado e hospedagem de alta performance.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="max-w-6xl mx-auto px-6 py-24 border-t border-white/5">
+			<div class="mb-16">
+				<h2 class="text-3xl font-bold mb-4">Soluções sob medida</h2>
+				<p class="text-gray-400">Projetos desenhados para cada tipo de necessidade.</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 gap-8">
+				<div class="p-1 border border-white/10 rounded-[2.5rem] bg-gradient-to-br from-white/5 to-transparent transition hover:border-white/20">
+					<div class="bg-amz-dark p-8 rounded-[2.3rem] h-full flex flex-col justify-between">
+						<div>
+							<div class="h-10 w-10 bg-amz-brand/20 rounded-full flex items-center justify-center mb-6">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amz-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold mb-4">Presença Local</h3>
+							<p class="text-gray-400 mb-6 text-sm leading-relaxed">
+								Para lojas e prestadores de serviço que desejam divulgar seus produtos.
+							</p>
+						</div>
+						<ul class="space-y-3 text-sm text-gray-300">
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> SEO</li>
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Velocidade de carregamento</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="p-1 border border-amz-brand/20 rounded-[2.5rem] bg-gradient-to-br from-amz-brand/10 to-transparent transition hover:border-amz-brand/40">
+					<div class="bg-amz-dark p-8 rounded-[2.3rem] h-full flex flex-col justify-between">
+						<div>
+							<div class="h-10 w-10 bg-amz-brand/20 rounded-full flex items-center justify-center mb-6">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amz-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold mb-4">Autoridade Digital</h3>
+							<p class="text-gray-400 mb-6 text-sm leading-relaxed">
+								Design exclusivo e premium para profissionais de alto nível que buscam elevar sua marca.
+							</p>
+						</div>
+						<ul class="space-y-3 text-sm text-gray-300">
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Layout 100% Personalizado</li>
+							<li class="flex items-center gap-2"><span class="text-amz-brand font-bold">✓</span> Experiência de marca única</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="max-w-6xl mx-auto px-6 py-12 border-t border-white/5">
+			<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+				<a href="/" class="hover:opacity-80 transition"><Logo /></a>
+				<p class="text-gray-500 text-xs">
+					© 2026 AMZ Digital Agency. Todos os direitos reservados.
+				</p>
+				<div class="flex gap-6 text-xs font-bold uppercase tracking-widest text-gray-400">
+					<a href="/servicos" class="hover:text-amz-brand transition">Serviços</a>
+					<a href={whatsappLink} target="_blank" class="hover:text-amz-brand transition text-amz-brand">Contato</a>
+				</div>
+			</div>
+		</footer>
+
+		<style>
+			@keyframes bounce-slow {
+				0%, 100% { transform: translateY(0); }
+				50% { transform: translateY(-20px); }
+			}
+			.animate-bounce-slow {
+				animation: bounce-slow 4s ease-in-out infinite;
+			}
+		</style>
+	</body>
+</html>
