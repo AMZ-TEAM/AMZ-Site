@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Logo from '../components/Logo.astro';
 
 const title = "Serviços | AMZ Digital Agency";
+const description = "Conheça nossas soluções: Landing Pages de alta conversão, Sites Institucionais premium e Suporte Digital de A a Z.";
 
 // Mesma lógica de briefing da Home
 const mensagemWhatsApp = `Olá, estava vendo a página de serviços e gostaria de um orçamento.
@@ -23,7 +24,16 @@ const whatsappLink = `https://wa.me/${seuNumero}?text=${encodeURIComponent(mensa
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://amz-sites.netlify.app/servicos" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/logo.png" />
 	</head>
 	<body class="bg-amz-dark text-amz-light font-sans antialiased overflow-x-hidden">
 		

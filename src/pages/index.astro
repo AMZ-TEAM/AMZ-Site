@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Logo from '../components/Logo.astro';
 
 const title = "AMZ | Consultoria Web de Início ao Fim";
+const description = "AMZ Digital Agency - Criação de sites de alta performance, Landing Pages e soluções digitais completas (A-Z).";
 
 // Configuração Estratégica do WhatsApp
 const mensagemWhatsApp = `Olá, Gostaria de um orçamento.
@@ -14,7 +15,6 @@ Aqui estão alguns detalhes para começarmos:
 - Já possui um site ou seria do zero?:
 - Qual seu orçamento disponível?:`;
 
-// Seu número configurado
 const seuNumero = "5531995081457"; 
 const whatsappLink = `https://wa.me/${seuNumero}?text=${encodeURIComponent(mensagemWhatsApp)}`;
 ---
@@ -24,7 +24,22 @@ const whatsappLink = `https://wa.me/${seuNumero}?text=${encodeURIComponent(mensa
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://amz-sites.netlify.app/" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/logo.png" />
+
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://amz-sites.netlify.app/" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content="/logo.png" />
 	</head>
 	<body class="bg-amz-dark text-amz-light font-sans antialiased overflow-x-hidden">
 		
