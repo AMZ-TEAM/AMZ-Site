@@ -3,9 +3,22 @@ import '../styles/global.css';
 import Logo from '../components/Logo.astro';
 
 const title = "Planos e Investimento | AMZ Digital Agency";
-
 const seuNumero = "5531995081457"; 
-const whatsappLink = (plano) => `https://wa.me/${seuNumero}?text=Olá! Gostaria de saber mais sobre o Plano ${plano} da AMZ.`;
+
+// Função para gerar links com mensagens personalizadas
+const gerarLinkWhatsApp = (plano) => {
+  let mensagem = "";
+  
+  if (plano === 'Essencial') {
+    mensagem = "Olá Diego! Vi o Plano ESSENCIAL no site e quero profissionalizar meu negócio com uma vitrine digital. Como começamos?";
+  } else if (plano === 'Premium') {
+    mensagem = "Olá Diego! Tenho interesse no Plano PREMIUM. Preciso de um posicionamento de alta autoridade e design exclusivo para minha marca.";
+  } else if (plano === 'Z') {
+    mensagem = "Olá! Gostaria de saber mais sobre o Plano Z de Suporte e Manutenção para manter meu site sempre seguro e rápido.";
+  }
+
+  return `https://wa.me/${seuNumero}?text=${encodeURIComponent(mensagem)}`;
+};
 ---
 
 <html lang="pt-br">
