@@ -1,0 +1,85 @@
+---
+import '../styles/global.css';
+import Logo from '../components/Logo.astro';
+
+const title = "Planos e Investimento | AMZ Digital Agency";
+
+const seuNumero = "5531995081457"; 
+const whatsappLink = (plano) => `https://wa.me/${seuNumero}?text=Olá! Gostaria de saber mais sobre o Plano ${plano} da AMZ.`;
+---
+
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title}</title>
+	</head>
+	<body class="bg-amz-dark text-amz-light font-sans antialiased">
+		<nav class="p-6 border-b border-white/5">
+			<div class="max-w-6xl mx-auto flex justify-between items-center">
+				<a href="/"><Logo /></a>
+				<a href="/" class="text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-amz-brand transition">← Voltar</a>
+			</div>
+		</nav>
+
+		<main class="max-w-6xl mx-auto px-6 py-20">
+			<div class="text-center mb-16">
+				<h1 class="text-4xl md:text-5xl font-bold mb-4 italic">Escolha o seu <span class="text-amz-brand">Próximo Nível</span></h1>
+				<p class="text-gray-400">Soluções transparentes para quem busca resultados reais.</p>
+			</div>
+
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 flex flex-col justify-between hover:border-amz-brand/30 transition shadow-2xl">
+					<div>
+						<span class="text-amz-brand text-xs font-bold uppercase tracking-widest">Início</span>
+						<h3 class="text-2xl font-bold mt-2 mb-4">Essencial</h3>
+						<div class="text-4xl font-black mb-6">R$ 350</div>
+						<ul class="space-y-4 text-sm text-gray-400 mb-8">
+							<li class="flex items-center gap-2">✅ Landing Page Exclusiva</li>
+							<li class="flex items-center gap-2">✅ Foco em Vendas/WhatsApp</li>
+							<li class="flex items-center gap-2">✅ Velocidade Instantânea</li>
+							<li class="flex items-center gap-2">✅ Configuração SEO Local</li>
+						</ul>
+					</div>
+					<a href={whatsappLink('Essencial')} class="block text-center bg-white/5 hover:bg-white/10 border border-white/10 py-4 rounded-2xl font-bold transition">Escolher Essencial</a>
+				</div>
+
+				<div class="p-8 rounded-[2.5rem] bg-gradient-to-br from-amz-brand/10 to-transparent border border-amz-brand/40 flex flex-col justify-between relative transform md:scale-105 shadow-2xl">
+					<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-amz-brand text-amz-dark text-[10px] font-bold px-4 py-1 rounded-full uppercase">Mais Procurado</div>
+					<div>
+						<span class="text-amz-brand text-xs font-bold uppercase tracking-widest">Meio</span>
+						<h3 class="text-2xl font-bold mt-2 mb-4">Premium</h3>
+						<div class="text-4xl font-black mb-6">R$ 800</div>
+						<ul class="space-y-4 text-sm text-gray-300 mb-8">
+							<li class="flex items-center gap-2">✅ Site Institucional Completo</li>
+							<li class="flex items-center gap-2">✅ Design de Alta Autoridade</li>
+							<li class="flex items-center gap-2">✅ Blog ou Portfólio</li>
+							<li class="flex items-center gap-2">✅ Estratégia de Marca</li>
+						</ul>
+					</div>
+					<a href={whatsappLink('Premium')} class="block text-center bg-amz-brand text-amz-dark py-4 rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(0,209,255,0.4)] transition">Escolher Premium</a>
+				</div>
+
+				<div class="p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 flex flex-col justify-between hover:border-amz-brand/30 transition shadow-2xl">
+					<div>
+						<span class="text-amz-brand text-xs font-bold uppercase tracking-widest">Fim</span>
+						<h3 class="text-2xl font-bold mt-2 mb-4">Plano Z</h3>
+						<div class="text-4xl font-black mb-6">R$ 49,90<span class="text-sm font-normal text-gray-500">/mês</span></div>
+						<ul class="space-y-4 text-sm text-gray-400 mb-8">
+							<li class="flex items-center gap-2">✅ Hospedagem Premium</li>
+							<li class="flex items-center gap-2">✅ Suporte e Manutenção</li>
+							<li class="flex items-center gap-2">✅ Segurança e SSL</li>
+							<li class="flex items-center gap-2">✅ Relatórios de Acesso</li>
+						</ul>
+					</div>
+					<a href={whatsappLink('Z')} class="block text-center bg-white/5 hover:bg-white/10 border border-white/10 py-4 rounded-2xl font-bold transition">Escolher Plano Z</a>
+				</div>
+			</div>
+		</main>
+
+		<footer class="py-12 text-center text-gray-600 text-[10px] uppercase tracking-widest">
+			AMZ Agency • 2026 • Preços válidos por tempo limitado.
+		</footer>
+	</body>
+</html>
