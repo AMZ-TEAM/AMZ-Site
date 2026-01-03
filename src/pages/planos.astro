@@ -5,6 +5,10 @@ import Logo from '../components/Logo.astro';
 const title = "Planos e Investimento | AMZ Digital Agency";
 const seuNumero = "5531995081457"; 
 
+// Variável para evitar erro de build no menu/footer
+const mensagemGeral = "Olá Diego! Gostaria de tirar algumas dúvidas sobre os serviços da AMZ.";
+const whatsappLink = `https://wa.me/${seuNumero}?text=${encodeURIComponent(mensagemGeral)}`;
+
 // Função para gerar links com mensagens personalizadas
 const gerarLinkWhatsApp = (plano) => {
   let mensagem = "";
@@ -28,11 +32,21 @@ const gerarLinkWhatsApp = (plano) => {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{title}</title>
 	</head>
-	<body class="bg-amz-dark text-amz-light font-sans antialiased">
-		<nav class="p-6 border-b border-white/5">
-			<div class="max-w-6xl mx-auto flex justify-between items-center">
-				<a href="/"><Logo /></a>
-				<a href="/" class="text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-amz-brand transition">← Voltar</a>
+	<body class="bg-amz-dark text-amz-light font-sans antialiased overflow-x-hidden">
+		
+		<nav class="sticky top-0 z-50 bg-amz-dark/90 backdrop-blur-md border-b border-white/5">
+			<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+				<a href="/" class="block hover:opacity-80 transition">
+					<Logo />
+				</a>
+				<div class="flex items-center gap-6">
+					<a href="/" class="text-xs font-bold text-gray-400 uppercase tracking-widest hover:text-amz-brand transition">
+						← Voltar
+					</a>
+					<a href={whatsappLink} target="_blank" class="text-xs font-bold bg-amz-brand text-amz-dark px-6 py-2.5 rounded-full hover:scale-105 transition-all uppercase tracking-tighter">
+						Contato
+					</a>
+				</div>
 			</div>
 		</nav>
 
@@ -47,8 +61,8 @@ const gerarLinkWhatsApp = (plano) => {
 					<div>
 						<span class="text-amz-brand text-xs font-bold uppercase tracking-widest">A</span>
 						<h3 class="text-2xl font-bold mt-2 mb-4">Essencial</h3>
-                        <div class="text-sm text-gray-500 mb-1">A partir de</div>
-						<div class="text-4xl font-black mb-6">R$ 350</div>
+						<div class="text-sm text-gray-500 mb-1">A partir de</div>
+						<div class="text-4xl font-black mb-6">R$ 950</div>
 						<ul class="space-y-4 text-sm text-gray-400 mb-8">
 							<li class="flex items-center gap-2">✅ Landing Page Exclusiva</li>
 							<li class="flex items-center gap-2">✅ Foco em Vendas/WhatsApp</li>
@@ -56,7 +70,7 @@ const gerarLinkWhatsApp = (plano) => {
 							<li class="flex items-center gap-2">✅ Configuração SEO Local</li>
 						</ul>
 					</div>
-					<a href={whatsappLink('Essencial')} class="block text-center bg-white/5 hover:bg-white/10 border border-white/10 py-4 rounded-2xl font-bold transition">Escolher Essencial</a>
+					<a href={gerarLinkWhatsApp('Essencial')} target="_blank" class="block text-center bg-white/5 hover:bg-white/10 border border-white/10 py-4 rounded-2xl font-bold transition">Escolher Essencial</a>
 				</div>
 
 				<div class="p-8 rounded-[2.5rem] bg-gradient-to-br from-amz-brand/10 to-transparent border border-amz-brand/40 flex flex-col justify-between relative transform md:scale-105 shadow-2xl">
@@ -64,8 +78,8 @@ const gerarLinkWhatsApp = (plano) => {
 					<div>
 						<span class="text-amz-brand text-xs font-bold uppercase tracking-widest">M</span>
 						<h3 class="text-2xl font-bold mt-2 mb-4">Premium</h3>
-                        <div class="text-sm text-gray-500 mb-1">A partir de</div>
-						<div class="text-4xl font-black mb-6">R$ 800</div>
+						<div class="text-sm text-amz-brand/70 mb-1">A partir de</div>
+						<div class="text-4xl font-black mb-6">R$ 2.800</div>
 						<ul class="space-y-4 text-sm text-gray-300 mb-8">
 							<li class="flex items-center gap-2">✅ Site Institucional Completo</li>
 							<li class="flex items-center gap-2">✅ Design de Alta Autoridade</li>
@@ -73,14 +87,15 @@ const gerarLinkWhatsApp = (plano) => {
 							<li class="flex items-center gap-2">✅ Estratégia de Marca</li>
 						</ul>
 					</div>
-					<a href={whatsappLink('Premium')} class="block text-center bg-amz-brand text-amz-dark py-4 rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(0,209,255,0.4)] transition">Escolher Premium</a>
+					<a href={gerarLinkWhatsApp('Premium')} target="_blank" class="block text-center bg-amz-brand text-amz-dark py-4 rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(0,209,255,0.4)] transition">Escolher Premium</a>
 				</div>
 
 				<div class="p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 flex flex-col justify-between hover:border-amz-brand/30 transition shadow-2xl">
 					<div>
 						<span class="text-amz-brand text-xs font-bold uppercase tracking-widest">Z</span>
 						<h3 class="text-2xl font-bold mt-2 mb-4">Plano Z</h3>
-						<div class="text-4xl font-black mb-6">R$ 49,90<span class="text-sm font-normal text-gray-500">/mês</span></div>
+						<div class="text-sm text-gray-500 mb-1">Assinatura</div>
+						<div class="text-4xl font-black mb-6">R$ 99,00<span class="text-sm font-normal text-gray-500">/mês</span></div>
 						<ul class="space-y-4 text-sm text-gray-400 mb-8">
 							<li class="flex items-center gap-2">✅ Hospedagem Premium</li>
 							<li class="flex items-center gap-2">✅ Suporte e Manutenção</li>
@@ -88,7 +103,7 @@ const gerarLinkWhatsApp = (plano) => {
 							<li class="flex items-center gap-2">✅ Relatórios de Acesso</li>
 						</ul>
 					</div>
-					<a href={whatsappLink('Z')} class="block text-center bg-white/5 hover:bg-white/10 border border-white/10 py-4 rounded-2xl font-bold transition">Escolher Plano Z</a>
+					<a href={gerarLinkWhatsApp('Z')} target="_blank" class="block text-center bg-white/5 hover:bg-white/10 border border-white/10 py-4 rounded-2xl font-bold transition">Escolher Plano Z</a>
 				</div>
 			</div>
 		</main>
