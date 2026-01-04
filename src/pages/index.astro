@@ -2,8 +2,8 @@
 import '../styles/global.css';
 import Logo from '../components/Logo.astro';
 
-const title = "AMZ | Consultoria Web de Início ao Fim";
-const description = "AMZ Digital Agency - Criação de sites de alta performance, Landing Pages e soluções digitais completas (A-Z).";
+const title = "AMZ Agency | Criação de Sites e Landing Pages Profissionais";
+const description = "Criamos sites de alta performance e Landing Pages para negócios locais e marcas de autoridade. Estratégia digital de A a Z.";
 
 // Configuração Estratégica do WhatsApp
 const mensagemWhatsApp = `Olá, Gostaria de um orçamento.
@@ -28,6 +28,10 @@ const whatsappLink = `https://wa.me/${seuNumero}?text=${encodeURIComponent(mensa
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
+		<meta name="apple-mobile-web-app-title" content="AMZ Digital" />
+		<meta name="application-name" content="AMZ Digital" />
+
+		<meta property="og:site_name" content="AMZ Digital Agency" />
 
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://amz-sites.netlify.app/" />
