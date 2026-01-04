@@ -5,6 +5,24 @@ import Logo from '../components/Logo.astro';
 const title = "AMZ Agency | Criação de Sites e Landing Pages Profissionais";
 const description = "Criamos sites de alta performance e Landing Pages para negócios locais e marcas de autoridade. Estratégia digital de A a Z.";
 
+// Dados dos seus projetos reais - ADICIONE SEUS SITES AQUI
+const projetos = [
+  {
+    titulo: "Nome do Cliente 1",
+    descricao: "Landing Page de alta conversão focada em leads via WhatsApp.",
+    imagem: "/portfolio-1.png", // Salve a imagem na pasta public/
+    link: "https://link-do-site-1.com.br",
+    tags: ["Landing Page", "Performance"]
+  },
+  {
+    titulo: "Nome do Cliente 2",
+    descricao: "Site institucional moderno com otimização completa de SEO Local.",
+    imagem: "/portfolio-2.png", 
+    link: "https://link-do-site-2.com.br",
+    tags: ["Site Institucional", "SEO"]
+  }
+];
+
 // Configuração Estratégica do WhatsApp
 const mensagemWhatsApp = `Olá, Gostaria de um orçamento.
 
@@ -99,7 +117,7 @@ const whatsappLink = `https://wa.me/${seuNumero}?text=${encodeURIComponent(mensa
 				<div class="hidden lg:block relative">
 					<div class="relative w-full aspect-square border border-white/10 rounded-[3rem] bg-gradient-to-br from-white/5 to-transparent flex items-center justify-center p-12">
 						<div class="w-full bg-amz-dark border border-amz-brand/40 p-6 rounded-2xl shadow-2xl animate-bounce-slow">
-							<div class="flex justify-between items-center mb-4">
+							<div class="justify-between items-center mb-4 flex">
 								<div class="h-2 w-12 bg-amz-brand rounded-full"></div>
 								<div class="h-2 w-4 bg-white/20 rounded-full"></div>
 							</div>
@@ -136,6 +154,48 @@ const whatsappLink = `https://wa.me/${seuNumero}?text=${encodeURIComponent(mensa
 					<h3 class="text-2xl font-bold mb-4 italic">Fim</h3>
 					<p class="text-gray-400 leading-relaxed text-sm">Lançamento, suporte dedicado e hospedagem de alta performance.</p>
 				</div>
+			</div>
+		</section>
+
+		<section id="portfolio" class="max-w-6xl mx-auto px-6 py-24 border-t border-white/5">
+			<div class="mb-16 text-center md:text-left">
+				<h2 class="text-3xl md:text-4xl font-bold mb-4">Projetos de <span class="text-amz-brand">Sucesso</span></h2>
+				<p class="text-gray-400">Resultados reais entregues para clientes que confiaram na AMZ.</p>
+			</div>
+
+			<div class="grid md:grid-cols-2 gap-10">
+				{projetos.map((projeto) => (
+					<div class="group bg-white/[0.02] rounded-[2.5rem] border border-white/5 overflow-hidden hover:border-amz-brand/40 transition-all duration-500">
+						<div class="aspect-video overflow-hidden border-b border-white/5">
+							<img 
+								src={projeto.imagem} 
+								alt={projeto.titulo} 
+								class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+							/>
+						</div>
+						<div class="p-8">
+							<div class="flex gap-2 mb-4">
+								{projeto.tags.map(tag => (
+									<span class="text-[10px] font-bold uppercase tracking-widest bg-amz-brand/10 text-amz-brand px-3 py-1 rounded-full border border-amz-brand/20">
+										{tag}
+									</span>
+								))}
+							</div>
+							<h3 class="text-2xl font-bold mb-3">{projeto.titulo}</h3>
+							<p class="text-gray-400 text-sm leading-relaxed mb-6">{projeto.descricao}</p>
+							<a 
+								href={projeto.link} 
+								target="_blank" 
+								class="inline-flex items-center font-bold text-sm uppercase tracking-widest text-amz-brand hover:gap-2 transition-all"
+							>
+								Visitar Site Oficial 
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+								</svg>
+							</a>
+						</div>
+					</div>
+				))}
 			</div>
 		</section>
 
