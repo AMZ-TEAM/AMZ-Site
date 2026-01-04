@@ -1,0 +1,10 @@
+# Boas vindas a todos os robôs
+User-agent: *
+Allow: /
+
+# Bloquear pastas que não precisam de indexação (caso você crie no futuro)
+Disallow: /admin/
+Disallow: /dist/
+
+# O caminho direto para o seu mapa do site (AJUSTE COM O SEU LINK)
+Sitemap: https://amz-sites.netlify.app/sitemap-index.xml
